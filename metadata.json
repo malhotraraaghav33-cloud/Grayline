@@ -1,0 +1,6 @@
+{
+  "name": "GRAYLINE Field Terminal",
+  "description": "Emergency tactical medical triage, patient telemetry, and evacuation logistics platform for defense field operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

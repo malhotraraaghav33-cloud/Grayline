@@ -1,0 +1,257 @@
+---
+name: Grayline Field Terminal
+colors:
+  surface: '#101410'
+  surface-dim: '#101410'
+  surface-bright: '#363a35'
+  surface-container-lowest: '#0b0f0b'
+  surface-container-low: '#191d18'
+  surface-container: '#1d211c'
+  surface-container-high: '#272b26'
+  surface-container-highest: '#323630'
+  on-surface: '#e0e4dc'
+  on-surface-variant: '#c6c7bc'
+  inverse-surface: '#e0e4dc'
+  inverse-on-surface: '#2d312c'
+  outline: '#909287'
+  outline-variant: '#45483f'
+  surface-tint: '#bfcba8'
+  primary: '#bfcba8'
+  on-primary: '#2a341b'
+  primary-container: '#596447'
+  on-primary-container: '#d4e0bc'
+  inverse-primary: '#576245'
+  secondary: '#d2c6a4'
+  on-secondary: '#373018'
+  secondary-container: '#51482f'
+  on-secondary-container: '#c4b897'
+  tertiary: '#bfcba9'
+  on-tertiary: '#2a341c'
+  tertiary-container: '#596448'
+  on-tertiary-container: '#d4e0bd'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#dbe7c3'
+  primary-fixed-dim: '#bfcba8'
+  on-primary-fixed: '#151e08'
+  on-primary-fixed-variant: '#404a2f'
+  secondary-fixed: '#efe2bf'
+  secondary-fixed-dim: '#d2c6a4'
+  on-secondary-fixed: '#211b06'
+  on-secondary-fixed-variant: '#4f462d'
+  tertiary-fixed: '#dbe7c4'
+  tertiary-fixed-dim: '#bfcba9'
+  on-tertiary-fixed: '#151e08'
+  on-tertiary-fixed-variant: '#404a30'
+  background: '#101410'
+  on-background: '#e0e4dc'
+  surface-variant: '#323630'
+typography:
+  headline-xl:
+    fontFamily: IBM Plex Sans
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: IBM Plex Sans
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.005em
+  headline-md:
+    fontFamily: IBM Plex Sans
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: IBM Plex Sans
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: IBM Plex Sans
+    fontSize: 15px
+    fontWeight: '400'
+    lineHeight: 22px
+  body-md:
+    fontFamily: IBM Plex Sans
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+  body-sm:
+    fontFamily: IBM Plex Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  telemetry-lg:
+    fontFamily: Space Mono
+    fontSize: 20px
+    fontWeight: '700'
+    lineHeight: 24px
+    letterSpacing: 0.02em
+  telemetry-md:
+    fontFamily: Space Mono
+    fontSize: 14px
+    fontWeight: '700'
+    lineHeight: 18px
+    letterSpacing: 0.03em
+  telemetry-sm:
+    fontFamily: Space Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  label-code:
+    fontFamily: Space Mono
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.06em
+  label-caps:
+    fontFamily: IBM Plex Sans
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.05em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 0.75rem
+  gutter-md: 1rem
+  margin: 1rem
+  margin-lg: 1.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+---
+
+## Brand & Style
+The design system establishes a high-reliability, low-distraction tactical computing environment engineered for emergency triage teams, combat medics, and aeromedical evacuation coordinators operating under harsh physical constraints and severe sensory stress. 
+
+The aesthetic is derived from MIL-STD rugged field terminals and tactical battle management displays: utilitarian, data-dense, structured, and impervious to ambient visual noise. Visual hierarchy must prioritize rapid glanceability and rapid status classification. Decorative flourishes, excessive radii, dramatic drop shadows, and non-essential animations are strictly eliminated. 
+
+Interface elements reflect the mechanical precision of military instrumentation: crisp 1px structural delineations, mono-spaced positional telemetry, clear compartmentalized data bays, and a muted olive-drab and dark charcoal surface system accented by purposeful triage signifiers.
+
+## Colors
+The color architecture relies strictly on an analog optical discipline: night-adapted, glare-resistant surfaces anchored by earth-toned chromas. 
+
+Under no circumstances may digital primary blues, cyans, magentas, or neon purple chromatic ramps be introduced. Every pixel must serve situational clarity.
+
+### Surface Hierarchy
+- **Canvas Base (`#171A16`):** The absolute foundational background. Absorbs peripheral light and grounds the screen.
+- **Main Terminal Background (`#20241F`):** Standard page surface and structural viewport backing.
+- **Panel Surface (`#252A23`):** Primary container for modules, flight lists, triage queues, and telemetry streams.
+- **Elevated / Active Surface (`#2D332A`):** Raised states, floating modals, contextual sub-panels, and active hover tiers.
+- **Divider & Framing Stroke (`#41473A`):** Structural 1px border that physically delineates operational sectors.
+
+### Chromatic Accents & Navigation
+- **Primary Action / Active Nav (`#596447` - Tactical Olive):** High-priority state indicators, selected tabs, confirm buttons.
+- **Sub-Primary / Inactive Active (`#343D2C` - Deep Olive):** Toggle backs, recessed status tracks, nested containers.
+- **Field Highlight (`#788365` - Field Green):** Subtle iconography, secondary interactive highlights, focus rings.
+
+### Typography & Readability
+- **Primary Data / Readings (`#E8E5D9` - Warm Off-White):** Maximum readable text for vitals, patient identifiers, and critical directives.
+- **Secondary Data / Units (`#A9AE9F` - Muted Secondary Text):** Metadata labels, units of measure (mmHg, bpm), grid column headers.
+- **Accent Callouts (`#B9AD8D` - Tactical Khaki) & (`#D6C9A8` - Field Sand):** Sector indicators, aircraft callsigns, evacuation priority codes.
+
+### Triage & Telemetry Status Signifiers
+Status signals override default palettes and must be treated as absolute state warnings:
+- **Emergency / Priority 1 / Immediate (`#C6534D`):** Arterial bleeding, airway failure, severe trauma. Used on tags, edge badges, and critical warning alerts.
+- **Delayed / Priority 2 / Urgency (`#D4A44D`):** Moderate shock, fractured limbs, systemic monitoring required.
+- **Minimal / Priority 3 / Stable (`#83A17A`):** Ambulatory, controlled vitals, routine transport queue.
+
+## Typography
+Typographic treatment follows strict split-discipline execution:
+
+1. **Analytical / Structural (IBM Plex Sans):** Applied across global platform navigation, patient demographic dossiers, narrative trauma notes, and standard command buttons. It provides high-contrast legibility even on low-nit vehicle consoles.
+2. **Telemetry / Quantitative (Space Mono):** Mandatory for all spatial coordinates (MGRS/GPS), timestamps (ZULU/LOCAL), physiological vital sign monitors (HR, SpO2, NIBP), transport unit callsigns, and patient triage barcodes. Mono-spaced metrics eliminate layout jitter caused by real-time streaming numerical changes.
+
+### Typographic Rules
+- All categorical labels, metadata keys, and triage priority tags must render in uppercase with positive letter spacing (`0.05em` to `0.06em`).
+- Numerical telemetry readouts must maintain rigid vertical grid alignment. Never use proportional figures for dynamic vital streams.
+- Mobile display downscales `headline-xl` to 24px and `headline-lg` to 20px to prevent viewport truncation inside cramped field vehicle tablets.
+
+## Layout & Spacing
+The layout reflects a multi-pane command and control environment designed for split-second parsing and high data density. Space is treated as a finite tactical asset; gratuitous margins and airy white space are actively suppressed in favor of compact, deliberate structural grouping.
+
+### Layout Mechanics
+- **Grid Architecture:** 12-column variable grid on desktop operations centers; 4-column rigid layout on rugged mobile field tablets.
+- **Docked Operational Bins:** The screen is divided into fixed architectural zones: Mission Navigation Bar (top/left), Active Sector/Flight Tracker (center or side panel), Incident Queue (main workspace), and Live Vitals/Telemetry Deck (right/docked rail).
+- **Density Profile:** Compact. Inter-card spacing strictly utilizes `0.5rem` (`space-sm`) to `0.75rem` (`space-md`). Padding inside telemetry cells rarely exceeds `0.5rem` to keep multiple casualty trajectories simultaneously visible without vertical scrolling.
+
+### Breakpoints & Adaptive Behaviors
+- **Desktop / Terminal Displays (HL
+NŠŠˆÚ[][[™[İ\Èš\K\[™H^[İ]ˆZ\ÜÚ[Ûˆ›Üİ\‹X\Ô›İ]HÛÜœšYÜ‹[™Ù[XİY]Y[X[šY™\İ™[XZ[ˆš\ÚX›HÛÛ˜İ\œ™[K‚‹H
+Š”YÙÙYX›]È™ZXÛH[İ[
+ÍHLÎ\
+NŠŠˆÜ][™Kˆ›Üİ\ˆÛÛ\Ù\È[È[ˆXÛÛ‹X[™\İ]\ÈÛÙHİš\
+
+K[ØØ][™ÈX^[][HšY]ÜÜÜXÙHÈØ\İX[H\ÜÙ\ÜÛY[›Ü›\È[™[[Y]H™XYİ]Ë‚‹H
+Š•XİXØ[[™[[Øš[H
+Í
+NŠŠˆÚ[™ÛKXÛÛ[[ˆİXÚÙYXÚËˆšXYÙHØ\™ÈY˜][ÈYÚXÛÛ˜\İÛÛ\Xİ›İÜÈÚ]Z[š[][H™\XØ[İXÚ\™Ù]ÈÈ˜XÚ[]]H[\˜Xİ[ÛˆÚ]XİXØ[Ûİ™Y[™Ë‚‚ˆÈÈ[]˜][Ûˆ	ˆ\•\È\ÚYÛˆŞ\İ[H™Z™XİÈŞ[]XÈ›Ø][™È›ÜÚYİÜËY™\ÙH][ÜÜ\šXÈÛİÜË[™ÛÛÜ™Y˜YX[YÚXZÜËˆ[ˆXİXØ[Ü\˜][ÛœËÙ]YË\™X[\İXÈÛÙÚYİÜÈÛÛ\›ÛZ\ÙH^[YÚ™XYXš[]H[™Û]\ˆšYÚ[[ÙHØÜ™Y[œË‚‚•š\İX[Y\˜\˜ÚH[™\\™HÛÛœİXİYİšXİH›İYÚ
+ŠÛ˜[[˜\ˆ^Y\š[™ÊŠˆ[™
+Š™[™Ú[™Y\™Y\›İ[™\H[™\ÊŠ‚‚‹H
+Š‘Ü›İ[™]™[
+ÌMÌPLM˜
+NŠŠˆHX\İ\ˆİXİ\˜[œ˜[YH[™Ø[˜\ÈİXœİ˜]K‚‹H
+Š“]™[HÛÛZ[™\œÈ
+ÌLLŒØÚ]\›Ü™\ˆÍMÌĞX
+NŠŠˆš[X\HšXYÙHš[œË[[Y]Hœ˜[Y\Ë[™Ø\İX[H\İËˆ‹H
+Š“]™[ˆİX‹T[™[È	ˆ™\İYÜ›İ\È
+Ì‘ÌÌXÚ]\›Ü™\ˆÍMÌĞX
+NŠŠˆÜ›İ\Yš][Y]šXÜË[œ]›ØÚÜËXİ]™HØ\İX[HØ\™İ]K[™Üİ™\ˆİ™\›^\Ë‚‹H
+Š‘\ÛÛ˜\İŠŠˆ[Ù[È[™Üš]XØ[İ™\›^\ÈÈ›İ\ÙH›\ˆÜˆÛÙÚYİÜÎÈ^H\ÙH[ˆÜ\]YHÌMÌPLM˜˜XÚÙ›Ü[[YY]	HÜXÚ]Kœ˜[YYHHYÚXÛÛ˜\İ\›Ü™\ˆ[ˆÍNMØÜˆHšXYÙHİ]\ÈÛÛÜˆ
+ĞÍLÍ›Üˆ[Y\™Ù[˜ŞH[\™[[ÛœÊK‚‹H
+Š”\ÚXØ[İ]\ÎŠŠˆXİ]™KÙ[XİYÜˆ™\ÜÙYÛÛ\Û™[È[™\Û™HÜˆİ\İÛˆ[ÈÌÍÑØÚ]HÜš\ÜĞPQÜˆÍNMØ›İ[™[™Èœ˜[YK‚‚ˆÈÈÚ\\Â‘Ù[ÛY]H\È\ØÚ\[™Y\˜Ú]Xİ\˜[[™ÛÛ\Xİˆ‚•Hš[X\HÛÜ›™\ˆ™X]Y[\ÈİšXİH
+Š“]™[H
+ÛÙHÈŒ\™[JJŠˆ›Üˆ[Ø\™Ë[Ù[\Ë[œ]Ë[™Ü\˜][Û˜[ÛÛ›ÛËˆ‹H]ÛœË˜YÙH[˜ÛÜİ\™\Ë[™İX‹\[™[ÈÚ\™HHY[XØ[ÛÜ›™\ˆ˜Y]\Ë‚‹HŞ\İ[HÛÛ\È[™ZXÜ›Ë]YÜÈ][^™HHYÚœ˜Y]\ÈÜˆ›]Ü]X\™HÛÜ›™\œÈÈ]›ÚÙHYXÚ[šXØ[]\È[™[Xİ›ÛšXÈYÜË‚‹H\™ÙHİ™\›^\È[™[Ù[ÚY]ÈØØ[HÈHX^[][HÛÜ›™\ˆ˜Y]\ÈÙˆœ
+›İ[™Y[Ø
+K™]Z[š[™ÈZ\ˆ[™\İšX[XXÚ[™KXİ]Y\İ]XË‚‹H[H›İ[™Y[È
+›İ[™YY[
+H\™HİšXİH›Ü˜šY[Èİ]\È˜YÙ\È]\İXZ[Z[ˆ™Xİ[™İ[\ˆ\ØÚ\[™HÈ™\Ù\™HÜš^›Û[]H[œÚ]K‚‚ˆÈÈÛÛ\Û™[Â‚ˆÈÈÈ]ÛœÈ	ˆXİXØ[šYÙÙ\œÂ‹H
+Š”š[X\HÛÛ[X[™]ÛŠŠˆ˜XÚÙÜ›İ[™ÍNMØ
+XİXØ[Û]™JK^ÑNMQX\›Ü™\ˆ[ˆÍÎÍXˆÛˆ™\ÜËØXİ]™NˆÌÍÑØˆZYÚˆÍœ
+\ÚİÜİ\›Z[˜[
+K
+šY[[Øš[JKˆ^[ˆ\\˜Ø\ÙHP“H^Ø[œÈLœ›Û‚‹H
+Š”ÙXÛÛ™\HÈ][]H]ÛŠŠˆ˜XÚÙÜ›İ[™ÌLLŒØ^ĞPQ\›Ü™\ˆÍMÌĞXˆİ™\ˆ˜XÚÙÜ›İ[™Ì‘ÌÌXÚ]ĞPQ›Ü™\‹‚‹H
+Š’^˜\™ÈšXYÙHXİ[Ûˆ]ÛŠŠˆ˜XÚÙÜ›İ[™ĞÍLÍ
+[Y\™Ù[˜ŞH™Y
+HÜˆ˜[œÜ\™[Ú]H\ĞÍLÍ›Ü™\ˆ[™™Y^›Üˆ\œ™]™\œÚX›HÜˆ[Y\™Ù[˜ŞHXİ[ÛœÈ
+K™Ë‹‘VPÕUHUPÈ‹‘“QÈT•T’PSÓÓT“ÓRTÑHŠK‚‚ˆÈÈÈšXYÙH	ˆ[[Y]H˜YÙ\È
+Ú\ÊB‹HİXİ\™Y\ÈÛÛ\Xİ™Xİ[™İ[\ˆYÜÈÚ]\\˜Ø\ÙHÜXÙH[Û›È\ÙÜ˜\H
+X™[XÛÙX
+K‚‹H
+Š’[[YYX]HÈšXYÙH›XÚËÔ™YŠŠˆĞÍLÍ˜XÚÙÜ›İ[™Ú]ÑNMQX^ÜˆÛÛYÌLLŒØœ˜[YHÚ]HÛÛYÜYYYÙHØ\›š[™È˜\ˆ[™ĞÍLÍ^‚‹H
+Š‘[^YYÈšXYÙHY[İÎŠŠˆÌLLŒØ˜XÚÙÜ›İ[™ÑM›Ü™\‹[™^‚‹H
+Š“Z[š[X[ÈšXYÙHÜ™Y[ŠŠˆÌLLŒØ˜XÚÙÜ›İ[™ÎĞLMĞX›Ü™\‹[™^‚‚ˆÈÈÈ]H[œÙHØ\İX[HØ\™Â‹H›İ[™YHHÛÛ[[İ\È\ÍMÌĞX›Ü™\ˆÚ]ÌLLŒØ˜XÚÙÜ›İ[™‚‹HYYÙH™X]\™\ÈHš^Yİ]\ÈšX˜›ÛˆX]Ú[™ÈØ\İX[HšXYÙHš[Üš]H
+ĞÍLÍÑMÎĞLMĞX
+K‚‹HÛÛ[İXİ\™Y[È\ØÜ™]H]H˜^\Îˆ]Y[QĞ˜\˜ÛÙHÜ[Y
+ÜXÙH[Û›ÊK[YK\Ú[˜ÙKZ[š\HÛİ[\ˆÜ\šYÚ
+ÜXÙH[Û›ÊKš][ÈX]š^Ù[\ˆ
+‹ÜÌ‹”[ˆ™YHÛÛ\\Y[[^™YÛÛ[[œÈÚ]\]šY\œÊK]˜XÈ\İ[˜][Ûˆ[™™ZXÛHØ[ÚYÛˆ[Û™ÈH›İÛH˜Z[‚‚ˆÈÈÈ[œ]šY[È	ˆÙ[XİÛÛ›ÛÂ‹H˜XÚÙÜ›İ[™ÌMÌPLM˜\İ›ÚÙHÍMÌĞX^ÑNMQX‚‹HXÙZÛ\ˆ^[ˆĞNPQNQ˜
+L	HÜXÚ]JK‚‹H›Øİ\Èİ]Nˆ™\XÙ\È›Ü™\ˆÚ]HÜš\Ü\ÍÎÍX\š[Y]\ˆİ›ÚÙKˆ›È^Hİ]\ˆÛİÈš[™ÜË‚‹HX™[ˆXÙYİ]ÚYHÜˆš^YX›İ™HH[œ][ˆ\\˜Ø\ÙHX™[XØ\Ø
+ĞNPQNQ˜
+K‚‚ˆÈÈÈ[[Y]Hİ™X[HÙ[È
+š][È™XYİ]ÊB‹HYXØ]YZXÜ›ËXÛÛ\Û™[È\Ü^Z[™È]™H]Y[İ™X[\Ë‚‹H›XÚÙ[™YÌMÌPLM˜™XÙ\ÜÙYİX‹\İ\™˜XÙHÚ]H\Ì‘ÌÌX›Ü™\‹‚‹HÛÛZ[œÈY]šXÈY[YšY\ˆ
+K™Ë‹’ˆÈ”HŠH[ˆL\\˜Ø\ÙHÜXÙH[Û›È
+ĞNPQNQ˜
+KZ\™YÚ]Hš[X\H™XYİ][ˆŒ›ÛÜXÙH[Û›È
+ÑNMQX
+KˆYˆ˜[YH\ÈÜš]XØ[
+K™Ë‹ˆˆMÜˆ
+KH[Y\šXØ[™XYİ]İÚ]Ú\ÈÈĞÍLÍ‚‚ˆÈÈÈÚXÚØ›Ş\È	ˆÙYÛY[YİÚ]Ú\Â‹H
+ŠÚXÚØ›Ş\ÎŠŠˆMMœÜ]X\™KÌMÌPLM˜š[\ÍMÌĞX›Ü™\‹œ˜Y]\ËˆXİ]™Hİ]NˆÍNMØš[Ú]HÑNMQXÚXÚÛX\šÈXÛÛ‹‚‹H
+Š”ÙYÛY[YÛÛ[X[™˜\ŠŠˆ[˜ÛÜÙYÜ›İ\[™ÈÙˆXİ[ÛœÈ
+ÌMÌPLM˜ÛÛZ[™\ŠHÚ][™]šYX[™Xİ[™İ[\ˆÙYÛY[]ÛœËˆXİ]™HÙYÛY[ZÙ\ÈÌ‘ÌÌX˜XÚÙÜ›İ[™[™ĞPQX™[›İ[™YHH\ÍNMØœ˜[YK

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GRAYLINE // FIELD RESPONSE 07 - COMMAND OVERVIEW</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#404a30",
+            "surface-container-high": "#272b26",
+            "tertiary-container": "#596448",
+            "on-tertiary-fixed": "#151e08",
+            "on-error": "#690005",
+            "secondary-fixed-dim": "#d2c6a4",
+            "on-primary-container": "#d4e0bc",
+            "on-secondary-fixed": "#211b06",
+            "tertiary-fixed-dim": "#bfcba9",
+            "on-secondary": "#373018",
+            "on-surface-variant": "#c6c7bc",
+            "primary-fixed": "#dbe7c3",
+            "inverse-on-surface": "#2d312c",
+            "on-background": "#e0e4dc",
+            "secondary-fixed": "#efe2bf",
+            "inverse-primary": "#576245",
+            "on-secondary-container": "#c4b897",
+            "background": "#101410",
+            "surface-dim": "#101410",
+            "surface-container-highest": "#323630",
+            "outline-variant": "#45483f",
+            "on-secondary-fixed-variant": "#4f462d",
+            "on-primary-fixed": "#151e08",
+            "primary": "#bfcba8",
+            "secondary-container": "#51482f",
+            "on-primary": "#2a341b",
+            "surface-bright": "#363a35",
+            "primary-container": "#596447",
+            "outline": "#909287",
+            "tertiary": "#bfcba9",
+            "surface-container": "#1d211c",
+            "on-error-container": "#ffdad6",
+            "surface-container-lowest": "#0b0f0b",
+            "inverse-surface": "#e0e4dc",
+            "tertiary-fixed": "#dbe7c4",
+            "on-tertiary": "#2a341c",
+            "surface": "#101410",
+            "error-container": "#93000a",
+            "on-tertiary-container": "#d4e0bd",
+            "surface-container-low": "#191d18",
+            "surface-tint": "#bfcba8",
+            "surface-variant": "#323630",
+            "error": "#ffb4ab",
+            "primary-fixed-dim": "#bfcba8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter-md": "1rem",
+            "gutter": "0.75rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "1.5rem",
+            "space-md": "0.75rem",
+            "space-lg": "1rem",
+            "margin-lg": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["IBM Plex Sans"],
+            "telemetry-sm": ["Space Mono"],
+            "body-lg": ["IBM Plex Sans"],
+            "label-code": ["Space Mono"],
+            "label-caps": ["IBM Plex Sans"],
+            "telemetry-lg": ["Space Mono"],
+            "headline-xl": ["IBM Plex Sans"],
+            "body-md": ["IBM Plex Sans"],
+            "telemetry-md": ["Space Mono"],
+            "headline-sm": ["IBM Plex Sans"],
+            "body-sm": ["IBM Plex Sans"],
+            "headline-md": ["IBM Plex Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "telemetry-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "400" }],
+            "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-code": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "telemetry-lg": ["20px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "telemetry-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #101410;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #45483f;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #596447;
+    }
+    /* Hatched military warning pattern */
+    .hazard-stripe {
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(147, 0, 10, 0.25),
+        rgba(147, 0, 10, 0.25) 8px,
+        rgba(29, 33, 28, 0.6) 8px,
+        rgba(29, 33, 28, 0.6) 16px
+      );
+    }
+    .topo-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(69, 72, 63, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(69, 72, 63, 0.18) 1px, transparent 1px);
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.9; }
+      50% { transform: scale(1.3); opacity: 0.2; }
+      100% { transform: scale(0.95); opacity: 0.9; }
+    }
+    .ping-slow {
+      animation: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-hidden h-screen flex flex-col font-body-md select-none">
+<!-- ========================================================================= -->
+<!-- 1. PERSISTENT TOP STATUS BAR (Shared TopNavBar Architecture)              -->
+<!-- ========================================================================= -->
+<header class="flex justify-between items-center w-full px-space-md py-space-xs border-b border-outline-variant bg-surface-container shrink-0 z-50">
+<!-- Left Segment: Identity & Scenario Context -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-wider text-primary uppercase">GRAYLINE</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code">
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-secondary border border-outline-variant">FIELD RESPONSE 07</span>
+<span class="text-secondary opacity-75 font-telemetry-sm text-telemetry-sm">(SIMULATION ONLY - EXERCISE CONTEXT)</span>
+</div>
+</div>
+<!-- Center Segment: Telemetry & Network Heartbeat -->
+<div class="hidden xl:flex items-center gap-space-lg font-telemetry-sm text-telemetry-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[16px]">wifi_tethering</span>
+<span>LINK: <span class="text-primary font-bold">99.8%</span> // AES-256</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">schedule</span>
+<span>LAST SYNC: <span class="text-on-surface">00:01:14 AGO</span> [LOCAL CACHE ARMED]</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-xs py-0.5 bg-error-container/30 border border-error/40 text-error">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-label-code text-label-code font-bold">3 CRITICAL / 5 AMBER</span>
+</div>
+</div>
+<!-- Right Segment: Tactical Officer & Zulu Clock & Primary Trigger -->
+<div class="flex items-center gap-space-md">
+<div class="hidden sm:flex items-center gap-space-xs font-telemetry-sm text-telemetry-sm border-r border-outline-variant pr-space-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">account_circle</span>
+<span class="text-on-surface-variant">MAJ. V. CHEN <span class="text-secondary">(TAC-MED 04)</span></span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 bg-surface-container-lowest border border-outline-variant">
+<span class="font-telemetry-sm text-telemetry-sm text-primary font-bold tracking-widest" id="zulu-clock">14:32:08 UTC</span>
+</div>
+<button class="bg-error-container text-on-error-container border border-error/50 hover:bg-error/30 active:bg-error-container px-space-md py-1 font-label-code text-label-code uppercase tracking-wider transition-colors duration-150 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">e911_emergency</span>
+        DECLARE MASCAL
+      </button>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- 2. MAIN APPLICATION SHELL: SIDEBAR + WORKSPACE                            -->
+<!-- ========================================================================= -->
+<div class="flex flex-1 overflow-hidden relative">
+<!-- PERSISTENT LEFT SIDEBAR (Tactical Drawer) -->
+<aside class="w-60 bg-surface-container-low border-r border-outline-variant flex flex-col justify-between shrink-0 select-none">
+<!-- Upper Section: TOC Banner & Primary Navigation -->
+<div class="flex flex-col">
+<div class="p-space-md border-b border-outline-variant bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">TOC SECTOR 4</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<div class="font-label-code text-label-code text-on-surface-variant tracking-wider mt-0.5">SYS NET: SECURE // 99.8%</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex flex-col py-space-xs">
+<!-- Item 1: Command Overview (ACTIVE) -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm bg-primary-container text-on-primary-container border-l-4 border-primary rounded-none font-label-code text-label-code uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Command Overview</span>
+</a>
+<!-- Item 2: Patient Monitoring -->
+<a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">monitor_heart</span>
+<span>Patient Monitoring</span>
+</div>
+<span class="text-[10px] text-error font-telemetry-sm bg-error-container/40 px-1 border border-error/30">3 CRIT</span>
+</a>
+<!-- Item 3: Triage Queue -->
+<a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+<span>Triage Queue</span>
+</div>
+<span class="text-[10px] text-secondary font-telemetry-sm">18 TOTAL</span>
+</a>
+<!-- Item 4: Evacuation Planner -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>Evacuation Planner</span>
+</a>
+<!-- Item 5: Medical Facilities -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">local_hospital</span>
+<span>Medical Facilities</span>
+</a>
+<!-- Item 6: Hazard Management -->
+<a class="flex items-center justify-between px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>Hazard Management</span>
+</div>
+<span class="text-[10px] text-secondary-fixed font-telemetry-sm">5 ACT</span>
+</a>
+<!-- Item 7: Incident Timeline -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Incident Timeline</span>
+</a>
+<!-- Item 8: Reports & Analytics -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">assessment</span>
+<span>Reports &amp; Analytics</span>
+</a>
+<!-- Item 9: Offline & Sync Center -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">sync_saved_locally</span>
+<span>Offline &amp; Sync</span>
+</a>
+<!-- Item 10: Settings & Simulation Controls -->
+<a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-primary rounded-none font-label-code text-label-code uppercase tracking-wider transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Sim Controls</span>
+</a>
+</nav>
+</div>
+<!-- Tactical Sidebar Footer -->
+<div class="p-space-sm border-t border-outline-variant bg-surface-container-lowest">
+<button class="w-full bg-primary-container text-on-primary-container border border-primary/50 py-space-xs font-label-code text-label-code uppercase tracking-wider hover:bg-primary hover:text-on-primary active:bg-surface-container-highest transition-colors mb-space-xs flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">helicopter</span>
+          DISPATCH MEDEVAC
+        </button>
+<div class="text-[10px] font-telemetry-sm text-outline text-center uppercase tracking-wider">
+          SIMULATION MODE // VER 2.4.1-TAC
+        </div>
+</div>
+</aside>
+<!-- CENTER / RIGHT WORKSPACE BODY -->
+<main class="flex-1 flex flex-col min-w-0 bg-background overflow-hidden">
+<!-- ========================================================================= -->
+<!-- 3. TOP METRIC CARDS ROW (5 Data-Dense Tactical Cells)                      -->
+<!-- ========================================================================= -->
+<section class="grid grid-cols-5 gap-space-xs p-space-xs border-b border-outline-variant bg-surface-container shrink-0">
+<!-- Card 1: ACTIVE PATIENTS -->
+<div class="bg-surface-container-low border border-outline-variant p-space-xs flex flex-col justify-between">
+<div class="flex justify-between items-center text-outline">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">ACTIVE PATIENTS</span>
+<span class="material-symbols-outlined text-[16px] text-primary">groups</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">18</span>
+<span class="font-label-code text-[10px] text-primary flex items-center">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +3 / 30m
+            </span>
+</div>
+<div class="mt-1 flex gap-1 font-label-code text-[9px] text-on-surface-variant tracking-tighter">
+<span class="text-error font-bold">6 CRIT</span> | 
+            <span class="text-secondary font-bold">8 PRIO</span> | 
+            <span class="text-primary font-bold">4 STBL</span>
+</div>
+</div>
+<!-- Card 2: CRITICAL CASES -->
+<div class="bg-surface-container-low border border-error/50 p-space-xs flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex justify-between items-center text-error">
+<span class="font-label-caps text-label-caps text-error uppercase font-bold pl-1">CRITICAL CASES</span>
+<span class="px-1 bg-error-container text-on-error font-label-code text-[9px] border border-error/50">IMMEDIATE</span>
+</div>
+<div class="flex items-baseline justify-between mt-1 pl-1">
+<span class="font-telemetry-lg text-telemetry-lg text-error">4</span>
+<span class="font-label-code text-[10px] text-error animate-pulse">AIR-EVAC REQ</span>
+</div>
+<div class="mt-1 pl-1 font-telemetry-sm text-[10px] text-on-surface-variant truncate">
+            TARGETS: <span class="text-on-surface font-bold">P-104, P-112</span>
+</div>
+</div>
+<!-- Card 3: AVAILABLE FACILITIES -->
+<div class="bg-surface-container-low border border-outline-variant p-space-xs flex flex-col justify-between">
+<div class="flex justify-between items-center text-outline">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">AVAILABLE FACILITIES</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">local_hospital</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">3 <span class="text-on-surface-variant text-telemetry-sm">/ 4 OPERATIONAL</span></span>
+<span class="font-label-code text-[10px] text-primary">GREEN</span>
+</div>
+<div class="mt-1 flex justify-between font-telemetry-sm text-[10px] text-on-surface-variant">
+<span>MED-01: <span class="text-secondary font-bold">82%</span></span>
+<span>MED-02: <span class="text-primary font-bold">45%</span></span>
+</div>
+</div>
+<!-- Card 4: REPORTED HAZARDS -->
+<div class="bg-surface-container-low border border-secondary/40 p-space-xs flex flex-col justify-between">
+<div class="flex justify-between items-center text-secondary">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">REPORTED HAZARDS</span>
+<span class="px-1 bg-secondary-container text-on-secondary-container font-label-code text-[9px] border border-secondary/40">5 ACTIVE</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-secondary">5</span>
+<span class="font-label-code text-[10px] text-secondary">2 ROADBLOCKS</span>
+</div>
+<div class="mt-1 font-telemetry-sm text-[10px] text-on-surface-variant truncate">
+            1 FLOOD ZONE // 2 UNVERIFIED
+          </div>
+</div>
+<!-- Card 5: PENDING SYNC UPDATES -->
+<div class="bg-surface-container-low border border-outline-variant p-space-xs flex flex-col justify-between">
+<div class="flex justify-between items-center text-outline">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">PENDING SYNC UPDATES</span>
+<span class="material-symbols-outlined text-[16px] text-outline">cloud_sync</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-lg text-telemetry-lg text-on-surface">2 <span class="text-on-surface-variant text-telemetry-sm">QUEUED</span></span>
+<span class="font-label-code text-[10px] text-primary">MESH ARMED</span>
+</div>
+<div class="mt-1 font-telemetry-sm text-[10px] text-on-surface-variant truncate">
+            NODE TAC-04B <span class="text-primary">OK</span> // 1.2 KB
+          </div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. CORE TWO-PANE COCKPIT: TACTICAL MAP (65%) & OPERATIONS PANEL (35%)      -->
+<!-- ========================================================================= -->
+<div class="flex-1 flex overflow-hidden">
+<!-- ------------------------------------------------------------------- -->
+<!-- LEFT: TACTICAL MAP DISPLAY (SECTOR 4)                               -->
+<!-- ------------------------------------------------------------------- -->
+<div class="w-[62%] border-r border-outline-variant flex flex-col relative bg-surface-container-lowest overflow-hidden">
+<!-- Map Command Overlay Toolbar -->
+<div class="absolute top-space-xs left-space-xs right-space-xs z-30 flex justify-between items-center pointer-events-none">
+<!-- Sector Legend Tag -->
+<div class="pointer-events-auto bg-surface-container/95 border border-outline-variant px-space-sm py-1 backdrop-blur-none flex items-center gap-space-sm">
+<span class="w-2 h-2 bg-error"></span>
+<span class="font-label-code text-label-code text-on-surface">SECTOR 4: ORCHARD VALLEY / HWY 12 CORRIDOR</span>
+<span class="text-outline text-telemetry-sm">|</span>
+<span class="font-telemetry-sm text-telemetry-sm text-primary">GRID: 34.201°N 118.470°W</span>
+</div>
+<!-- Layer Toggles -->
+<div class="pointer-events-auto flex items-center bg-surface-container/95 border border-outline-variant">
+<button class="px-space-xs py-1 border-r border-outline-variant font-label-code text-[10px] text-primary bg-primary-container/40 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">person_pin</span> PATIENTS [18]
+              </button>
+<button class="px-space-xs py-1 border-r border-outline-variant font-label-code text-[10px] text-primary flex items-center gap-1 hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[13px]">local_hospital</span> FACILITIES [4]
+              </button>
+<button class="px-space-xs py-1 border-r border-outline-variant font-label-code text-[10px] text-secondary flex items-center gap-1 hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[13px]">warning</span> HAZARDS [5]
+              </button>
+<button class="px-space-xs py-1 font-label-code text-[10px] text-on-surface-variant flex items-center gap-1 hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[13px]">layers</span> CONTOURS
+              </button>
+</div>
+</div>
+<!-- Synthetic Tactical Vector Map Workspace -->
+<div class="w-full h-full relative topo-grid overflow-hidden bg-[#121612]">
+<!-- Map Vector Contour Lines & Roads (SVG Layer) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none stroke-outline-variant/40" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="8" id="diagonal-stripe" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="8">
+<rect fill="#93000a" height="8" opacity="0.6" width="2"></rect>
+</pattern>
+</defs>
+<!-- Elevation contours -->
+<path d="M-50,150 Q180,80 340,190 T700,120 T1100,260" fill="none" opacity="0.4" stroke-dasharray="2 3" stroke-width="1"></path>
+<path d="M-50,220 Q220,150 420,240 T800,190 T1100,320" fill="none" opacity="0.4" stroke-dasharray="2 3" stroke-width="1"></path>
+<path d="M-50,340 Q150,290 380,360 T750,300 T1100,410" fill="none" opacity="0.4" stroke-dasharray="2 3" stroke-width="1"></path>
+<path d="M-50,460 Q260,390 510,480 T900,420 T1100,530" fill="none" opacity="0.4" stroke-dasharray="2 3" stroke-width="1"></path>
+<!-- Highway 12 Primary Arterial (Red dashed where blocked) -->
+<path d="M 40,540 L 260,380 L 440,290 L 610,230 L 890,140" fill="none" stroke="#909287" stroke-linecap="square" stroke-width="3"></path>
+<path d="M 40,540 L 260,380 L 440,290 L 610,230 L 890,140" fill="none" stroke="#1d211c" stroke-dasharray="4 4" stroke-width="1"></path>
+<!-- Route Corridor A* Target Vector (MED-01 to P-104) -->
+<path class="animate-pulse" d="M 280,120 L 320,180 L 260,250 L 260,380" fill="none" stroke="#dbe7c3" stroke-dasharray="5 5" stroke-width="2"></path>
+<!-- Blocked segment indicator on HWY 12 -->
+<line stroke="#ffb4ab" stroke-linecap="round" stroke-width="6" x1="410" x2="470" y1="305" y2="275"></line>
+</svg>
+<!-- HAZARD OVERLAY: HZ-021 'HWY 12 BRIDGE STRUCTURAL COLLAPSE' -->
+<div class="absolute top-[260px] left-[400px] w-36 h-20 hazard-stripe border-2 border-error/80 flex flex-col justify-between p-1 z-10 shadow-none">
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 px-1 border border-error/50">
+<span class="material-symbols-outlined text-error text-[12px]">block</span>
+<span class="font-label-code text-[9px] text-error font-bold">HZ-021: COLLAPSE</span>
+</div>
+<div class="font-telemetry-sm text-[9px] text-error-container bg-surface-container-lowest/80 px-1">
+                HWY 12 BRIDGE // BLOCKED
+              </div>
+</div>
+<!-- HAZARD OVERLAY: HZ-024 'DEBRIS SLIDE' -->
+<div class="absolute top-[160px] left-[560px] w-24 h-14 bg-secondary-container/30 border border-secondary flex flex-col justify-between p-1 z-10">
+<div class="flex items-center gap-1 font-label-code text-[9px] text-secondary">
+<span class="material-symbols-outlined text-[12px]">warning</span>
+<span>HZ-024 SLIDE</span>
+</div>
+<span class="font-telemetry-sm text-[8px] text-on-surface-variant">ROAD RESTRICTED</span>
+</div>
+<!-- PATIENT MARKER: P-104 (Flashing Critical Red with Vitals pop-tag) -->
+<div class="absolute top-[350px] left-[230px] z-20">
+<div class="relative flex items-center justify-center">
+<!-- Flashing Ping Ring -->
+<div class="absolute w-10 h-10 rounded-full border-2 border-error ping-slow pointer-events-none"></div>
+<!-- Core Marker Dot -->
+<div class="w-4 h-4 bg-error border-2 border-surface-container-lowest flex items-center justify-center font-label-code text-[9px] text-on-error font-bold">
+                  !
+                </div>
+</div>
+<!-- Attached Data HUD Box -->
+<div class="absolute left-6 -top-3 bg-surface-container-lowest border border-error p-space-xs w-48 shadow-none">
+<div class="flex justify-between items-center border-b border-outline-variant pb-0.5">
+<span class="font-label-code text-label-code text-error font-bold">CASUALTY: P-104</span>
+<span class="px-1 bg-error text-surface-container-lowest font-label-code text-[9px]">CRITICAL</span>
+</div>
+<div class="grid grid-cols-3 gap-1 mt-1 font-telemetry-sm text-[10px] text-center">
+<div class="bg-surface-container-high border border-outline-variant">
+<span class="text-outline block text-[8px]">HR</span>
+<span class="text-error font-bold">138</span>
+</div>
+<div class="bg-surface-container-high border border-outline-variant">
+<span class="text-outline block text-[8px]">SPO2</span>
+<span class="text-error font-bold">88%</span>
+</div>
+<div class="bg-surface-container-high border border-outline-variant">
+<span class="text-outline block text-[8px]">BP</span>
+<span class="text-on-surface font-bold">82/54</span>
+</div>
+</div>
+<div class="font-telemetry-sm text-[9px] text-outline mt-1 truncate">
+                  34°12'04"N 118°28'15"W
+                </div>
+</div>
+</div>
+<!-- PATIENT MARKER: P-112 (Red Marker - Blast Polytrauma) -->
+<div class="absolute top-[440px] left-[140px] z-20 flex items-center gap-1">
+<div class="w-3.5 h-3.5 bg-error border border-surface-container-lowest"></div>
+<div class="bg-surface-container-low border border-error px-1 font-label-code text-[9px] text-error">
+                P-112 [CRIT / HR 42]
+              </div>
+</div>
+<!-- PATIENT MARKER: P-108 (Amber Marker - Shrapnel extremity) -->
+<div class="absolute top-[230px] left-[320px] z-20 flex items-center gap-1">
+<div class="w-3.5 h-3.5 bg-secondary border border-surface-container-lowest"></div>
+<div class="bg-surface-container-low border border-secondary px-1 font-label-code text-[9px] text-secondary">
+                P-108 [PRIO / TQ 13:45Z]
+              </div>
+</div>
+<!-- FACILITY MARKER: MED-01 'FORWARD SURGICAL TEAM ALPHA' -->
+<div class="absolute top-[100px] left-[260px] z-20">
+<div class="flex items-center gap-1 bg-surface-container-low border-2 border-primary p-1">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">add_box</span>
+<div>
+<div class="font-label-code text-[10px] text-primary font-bold">MED-01: FST ALPHA</div>
+<div class="font-telemetry-sm text-[9px] text-on-surface-variant">12 BEDS FREE // CAP 82%</div>
+</div>
+</div>
+</div>
+<!-- FACILITY MARKER: MED-02 'REGIONAL TRAUMA CENTER' -->
+<div class="absolute top-[110px] left-[780px] z-20">
+<div class="flex items-center gap-1 bg-surface-container-low border border-tertiary p-1">
+<span class="material-symbols-outlined text-tertiary text-[18px]">local_hospital</span>
+<div>
+<div class="font-label-code text-[10px] text-tertiary font-bold">MED-02: REGIONAL TRAUMA</div>
+<div class="font-telemetry-sm text-[9px] text-on-surface-variant">38 BEDS FREE // CAP 45%</div>
+</div>
+</div>
+</div>
+<!-- Bottom Left HUD: Tactical Reticle Coordinates & Scale -->
+<div class="absolute bottom-space-xs left-space-xs z-30 bg-surface-container-lowest/90 border border-outline-variant p-space-xs font-telemetry-sm text-[10px] space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-outline">CURSOR:</span>
+<span class="text-primary font-bold">34°13'44"N 118°27'02"W</span>
+<span class="text-outline">ELEV: 412M</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">CORRIDOR A*:</span>
+<span class="text-primary">CLEAR (VIA BYPASS 4C)</span>
+<span class="text-outline">ETA: 14 MIN</span>
+</div>
+<!-- Scale Bar -->
+<div class="flex items-center gap-1 pt-1 border-t border-outline-variant">
+<div class="w-16 h-1 bg-outline flex justify-between">
+<div class="w-0.5 h-2 bg-outline -mt-0.5"></div>
+<div class="w-0.5 h-2 bg-outline -mt-0.5"></div>
+</div>
+<span class="text-[9px] text-outline">2.0 KM</span>
+</div>
+</div>
+<!-- Bottom Right HUD: Map Navigation Quick Buttons -->
+<div class="absolute bottom-space-xs right-space-xs z-30 flex flex-col gap-1">
+<button class="w-7 h-7 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high flex items-center justify-center font-bold text-sm">+</button>
+<button class="w-7 h-7 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high flex items-center justify-center font-bold text-sm">-</button>
+<button class="w-7 h-7 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high flex items-center justify-center" title="Recenter">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+<button class="w-7 h-7 bg-surface-container border border-outline-variant text-on-surface hover:bg-surface-container-high flex items-center justify-center" title="Fit to bounds">
+<span class="material-symbols-outlined text-[16px]">crop_free</span>
+</button>
+</div>
+</div>
+</div>
+<!-- ------------------------------------------------------------------- -->
+<!-- RIGHT: OPERATIONS & TRIAGE QUEUE PANEL (38%)                       -->
+<!-- ------------------------------------------------------------------- -->
+<div class="w-[38%] flex flex-col bg-surface-container overflow-hidden">
+<!-- Urgent Case Queue Header -->
+<div class="p-space-xs border-b border-outline-variant bg-surface-container-high flex justify-between items-center shrink-0">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">priority_high</span>
+<span class="font-headline-sm text-headline-sm font-semibold uppercase text-on-surface">Urgent Case Queue</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="font-label-code text-[10px] text-error bg-error-container/40 px-1 border border-error/50">2 IMMEDIATE</span>
+<span class="font-label-code text-[10px] text-secondary bg-secondary-container/40 px-1 border border-secondary/50">1 PRIORITY</span>
+</div>
+</div>
+<!-- Scrollable Casualty Deck -->
+<div class="flex-1 overflow-y-auto p-space-xs space-y-space-xs custom-scroll">
+<!-- CASUALTY CARD 1: P-104 (CRITICAL) -->
+<div class="bg-surface-container-low border border-error/70 relative">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<!-- Card Header -->
+<div class="p-space-xs pl-3 border-b border-outline-variant flex justify-between items-start bg-error-container/10">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PATIENT P-104</span>
+<span class="font-label-code text-[10px] bg-error text-surface-container-lowest px-1 font-bold">CRITICAL / RED</span>
+</div>
+<div class="font-telemetry-sm text-[11px] text-error font-bold mt-0.5">
+                    TENSION PNEUMOTHORAX SUSPECTED
+                  </div>
+</div>
+<div class="text-right">
+<span class="font-label-code text-[10px] text-outline block">TSI: +00:24:10</span>
+<span class="font-label-code text-[9px] text-primary">RULE-01 HIT</span>
+</div>
+</div>
+<!-- Vitals Telemetry Sub-bay -->
+<div class="p-space-xs pl-3 grid grid-cols-4 gap-1 border-b border-outline-variant bg-surface-container-lowest">
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">HR / BPM</span>
+<span class="font-telemetry-md text-telemetry-md text-error">138</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">SPO2</span>
+<span class="font-telemetry-md text-telemetry-md text-error">88%</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">BP MMHG</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">82/54</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">RESP / MIN</span>
+<span class="font-telemetry-md text-telemetry-md text-error">28</span>
+</div>
+</div>
+<!-- Diagnostics & Action Row -->
+<div class="p-space-xs pl-3 flex justify-between items-center bg-surface-container-low">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+                  Match: <span class="text-secondary font-telemetry-sm">HYPOXIA + TACHYCARDIA</span>
+</div>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary border border-primary/50 px-space-sm py-1 font-label-code text-label-code uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flight_takeoff</span>
+                  ASSIGN EVAC MED-01
+                </button>
+</div>
+</div>
+<!-- CASUALTY CARD 2: P-112 (CRITICAL) -->
+<div class="bg-surface-container-low border border-error/50 relative">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<div class="p-space-xs pl-3 border-b border-outline-variant flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PATIENT P-112</span>
+<span class="font-label-code text-[10px] bg-error text-surface-container-lowest px-1 font-bold">CRITICAL / RED</span>
+</div>
+<div class="font-telemetry-sm text-[11px] text-error font-bold mt-0.5">
+                    BLAST POLYTRAUMA // HEMODYNAMIC COLLAPSE
+                  </div>
+</div>
+<div class="text-right">
+<span class="font-label-code text-[10px] text-outline block">TSI: +00:38:40</span>
+<span class="font-label-code text-[9px] text-error">BRADYCARDIC</span>
+</div>
+</div>
+<!-- Vitals Matrix -->
+<div class="p-space-xs pl-3 grid grid-cols-4 gap-1 border-b border-outline-variant bg-surface-container-lowest">
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">HR / BPM</span>
+<span class="font-telemetry-md text-telemetry-md text-error">42</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">SPO2</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">91%</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">BP MMHG</span>
+<span class="font-telemetry-md text-telemetry-md text-error">76/40</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">GCS SCORE</span>
+<span class="font-telemetry-md text-telemetry-md text-error">7</span>
+</div>
+</div>
+<!-- Action Rail -->
+<div class="p-space-xs pl-3 flex justify-between items-center bg-surface-container-low">
+<div class="font-body-sm text-body-sm text-outline">
+                  Status: Ground transport non-viable (Bridge out)
+                </div>
+<button class="bg-surface-container-highest text-secondary border border-outline-variant hover:border-secondary px-space-sm py-1 font-label-code text-label-code uppercase tracking-wider transition-colors">
+                  REQUEST ROTOR 02
+                </button>
+</div>
+</div>
+<!-- CASUALTY CARD 3: P-108 (PRIORITY / AMBER) -->
+<div class="bg-surface-container-low border border-secondary/50 relative">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="p-space-xs pl-3 border-b border-outline-variant flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">PATIENT P-108</span>
+<span class="font-label-code text-[10px] bg-secondary-container text-on-secondary-container px-1 font-bold border border-secondary/40">PRIORITY / AMBER</span>
+</div>
+<div class="font-telemetry-sm text-[11px] text-secondary mt-0.5">
+                    SHRAPNEL EXTREMITY (R FEMORAL) // TQ APPLIED
+                  </div>
+</div>
+<div class="text-right">
+<span class="font-label-code text-[10px] text-outline block">TQ TIME: 13:45Z</span>
+<span class="font-label-code text-[9px] text-secondary font-bold">TIMER: 00:47:08</span>
+</div>
+</div>
+<div class="p-space-xs pl-3 grid grid-cols-4 gap-1 border-b border-outline-variant bg-surface-container-lowest">
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">HR / BPM</span>
+<span class="font-telemetry-md text-telemetry-md text-secondary">110</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">SPO2</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">94%</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">BP MMHG</span>
+<span class="font-telemetry-md text-telemetry-md text-on-surface">104/68</span>
+</div>
+<div class="p-1 border border-outline-variant bg-surface-container-low">
+<span class="font-label-code text-[9px] text-outline block">PAIN LVL</span>
+<span class="font-telemetry-md text-telemetry-md text-secondary">8/10</span>
+</div>
+</div>
+<div class="p-space-xs pl-3 flex justify-between items-center bg-surface-container-low">
+<div class="font-body-sm text-body-sm text-outline">
+                  Dest: MED-02 GROUND CONVOY B
+                </div>
+<button class="bg-surface-container-highest text-on-surface-variant hover:text-on-surface border border-outline-variant px-space-sm py-1 font-label-code text-label-code uppercase tracking-wider transition-colors">
+                  UPDATE VITALS
+                </button>
+</div>
+</div>
+<!-- SUB-BAY: LATEST HAZARD REPORTS -->
+<div class="border border-outline-variant bg-surface-container-lowest p-space-xs space-y-space-xs">
+<div class="flex justify-between items-center border-b border-outline-variant pb-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">report</span>
+                  SECTOR HAZARD INTEL
+                </span>
+<span class="font-label-code text-[9px] text-outline">UPDATED 14:30Z</span>
+</div>
+<div class="p-space-xs bg-surface-container border-l-2 border-error">
+<div class="flex justify-between font-label-code text-[10px]">
+<span class="text-error font-bold">HZ-021: WAYPOINT CHARLIE</span>
+<span class="text-outline">RECON 2 VERIFIED</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface mt-0.5">
+                  Bridge structural collapse. Arterial completely impassable to heavy ambulances. Est. clear: 4.5h.
+                </div>
+</div>
+<div class="p-space-xs bg-surface-container border-l-2 border-secondary">
+<div class="flex justify-between font-label-code text-[10px]">
+<span class="text-secondary font-bold">HZ-028: POWER GRID SECTOR 4B</span>
+<span class="text-outline">UNVERIFIED FIELD RPT</span>
+</div>
+<div class="font-body-sm text-[11px] text-on-surface mt-0.5">
+                  Local feeder substation failure. Backup generators online at auxiliary rally points.
+                </div>
+</div>
+</div>
+<!-- SUB-BAY: FACILITY CAPACITY MINI-METERS -->
+<div class="border border-outline-variant bg-surface-container-lowest p-space-xs">
+<div class="flex justify-between items-center border-b border-outline-variant pb-1 mb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">domain</span>
+                  FACILITY SURGE STATUS
+                </span>
+<span class="font-label-code text-[9px] text-primary">3 RECEIVING</span>
+</div>
+<!-- Meter 1: MED-01 -->
+<div class="space-y-1 mb-2">
+<div class="flex justify-between font-telemetry-sm text-[10px]">
+<span class="text-on-surface">MED-01 (FST ALPHA)</span>
+<span class="text-secondary font-bold">82% CAP // 4 ICU BEDS</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 border border-outline-variant">
+<div class="bg-secondary h-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Meter 2: MED-02 -->
+<div class="space-y-1 mb-2">
+<div class="flex justify-between font-telemetry-sm text-[10px]">
+<span class="text-on-surface">MED-02 (REGIONAL TRAUMA)</span>
+<span class="text-primary font-bold">45% CAP // 18 ICU BEDS</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 border border-outline-variant">
+<div class="bg-primary h-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Meter 3: MED-03 -->
+<div class="space-y-1">
+<div class="flex justify-between font-telemetry-sm text-[10px]">
+<span class="text-on-surface">MED-03 (CLINIC FOXTROT)</span>
+<span class="text-error font-bold">96% CAP // CRITICAL AT CAPACITY</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 border border-outline-variant">
+<div class="bg-error h-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- 5. BOTTOM WORKSPACE BAR / EVENT LOG & COMMAND TRIGGER DRAWER              -->
+<!-- ========================================================================= -->
+<footer class="border-t border-outline-variant bg-surface-container-lowest shrink-0 select-none">
+<!-- Status Bar & Quick Actions Strip -->
+<div class="flex justify-between items-center px-space-md py-space-xs bg-surface-container border-b border-outline-variant">
+<!-- Priority Distribution Bar Indicator -->
+<div class="flex items-center gap-space-md">
+<span class="font-label-caps text-label-caps text-outline uppercase">TRIAGE RATIO:</span>
+<div class="flex items-center gap-1">
+<div class="w-44 h-3 bg-surface-container-highest flex border border-outline-variant overflow-hidden">
+<div class="bg-error h-full" style="width: 22%" title="22% Critical"></div>
+<div class="bg-secondary h-full" style="width: 44%" title="44% Priority"></div>
+<div class="bg-primary h-full" style="width: 34%" title="34% Stable"></div>
+</div>
+<span class="font-telemetry-sm text-[10px] text-on-surface-variant">22% C / 44% P / 34% S</span>
+</div>
+</div>
+<!-- Bottom Operational Action Triggers -->
+<div class="flex items-center gap-space-xs">
+<button class="bg-error-container text-on-error-container hover:bg-error/40 border border-error px-space-md py-1 font-label-code text-label-code uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+              DECLARE MASCAL
+            </button>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary border border-primary/50 px-space-md py-1 font-label-code text-label-code uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">alt_route</span>
+              CALCULATE EVAC CORRIDOR
+            </button>
+<button class="bg-surface-container-highest text-secondary hover:text-on-surface border border-outline-variant px-space-md py-1 font-label-code text-label-code uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">download</span>
+              EXPORT SITREP (CSV)
+            </button>
+</div>
+</div>
+<!-- Live Triage Event Feed Strip -->
+<div class="flex items-center px-space-md py-1 gap-space-md overflow-x-auto whitespace-nowrap font-telemetry-sm text-[11px] custom-scroll">
+<span class="text-primary font-bold flex items-center gap-1 shrink-0">
+<span class="w-1.5 h-1.5 bg-primary rounded-full animate-ping"></span>
+            EVENT STREAM:
+          </span>
+<div class="flex items-center gap-space-lg text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="text-outline">14:28:10Z</span> — 
+              <span class="text-error font-bold">P-104 SpO2 dropped below 90%</span>
+<span class="text-on-surface">→ Auto-elevated to CRITICAL</span>
+</span>
+<span class="text-outline">|</span>
+<span class="flex items-center gap-1">
+<span class="text-outline">14:25:02Z</span> — 
+              <span class="text-primary font-bold">MED-01</span> accepted air ambulance query for Trauma Bed 03
+            </span>
+<span class="text-outline">|</span>
+<span class="flex items-center gap-1">
+<span class="text-outline">14:20:44Z</span> — 
+              <span class="text-secondary font-bold">HZ-021</span> verified road closure on HWY 12 Bridge
+            </span>
+</div>
+</div>
+</footer>
+</main>
+</div>
+<!-- Lightweight Vanilla JS for Live Zulu Clock and Micro-Interactions -->
+<script>
+    function updateZuluClock() {
+      const now = new Date();
+      const hours = String(now.getUTCHours()).padStart(2, '0');
+      const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+      const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+      const clockElement = document.getElementById('zulu-clock');
+      if (clockElement) {
+        clockElement.textContent = `${hours}:${minutes}:${seconds} UTC`;
+      }
+    }
+    setInterval(updateZuluClock, 1000);
+    updateZuluClock();
+  </script>
+</body></html>
